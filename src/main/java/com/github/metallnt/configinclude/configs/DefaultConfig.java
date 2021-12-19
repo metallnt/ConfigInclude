@@ -42,5 +42,8 @@ public class DefaultConfig extends AbstractConfig {
     }
 
     // Вставляем фенкции получения конкретных значений из конфига
+    public boolean getUpdateConfig() {
+        return this.getConfig().getBoolean("update_config", true);
+    }
 
 }

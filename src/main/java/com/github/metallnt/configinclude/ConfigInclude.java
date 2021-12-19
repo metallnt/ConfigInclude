@@ -26,6 +26,13 @@ public final class ConfigInclude extends JavaPlugin {
         }
 
         // Обновляем конфиг
+        if (this.getDefaultConfig().getUpdateConfig()) {
+            if (this.getDefaultConfig().updateConfigNewOptions()) {
+                this.getServer().getConsoleSender().sendMessage("Конфиг обновлен");
+            } else {
+                this.getServer().getConsoleSender().sendMessage("Конфиг не смог обновиться");
+            }
+        }
 
     }
 
